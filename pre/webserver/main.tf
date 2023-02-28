@@ -7,7 +7,7 @@ terraform {
     dynamodb_table = "curso-terraform-locks"
     encrypt        = true
     key            = "ejercicio_terraform_aws_5/pre/webserver/terraform.tfstate"
-    profile        = "juanvelascoaws"
+    profile        = "default"
     region         = "eu-west-3"
   }
 }
@@ -24,7 +24,7 @@ terraform {
 }
 
 provider "aws" {
-  profile = "juanvelascoaws"
+  profile = "default"
   region  = "eu-west-3"
 }
 
@@ -52,7 +52,7 @@ data "terraform_remote_state" "database" {
     bucket  = "curso-terraform-state"
     key     = "ejercicio_terraform_aws_5/pre/database/terraform.tfstate"
     region  = "eu-west-3"
-    profile = "juanvelascoaws"
+    profile = "default"
   }
 }
 
